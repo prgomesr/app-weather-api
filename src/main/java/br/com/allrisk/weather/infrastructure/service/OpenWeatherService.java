@@ -60,7 +60,7 @@ public class OpenWeatherService {
         return List.copyOf(uniqueCities);
     }
 
-    private LocalDate getDate(Integer dt) {
-        return Instant.ofEpochSecond(dt).atZone(ZoneId.systemDefault()).toLocalDate();
+    private LocalDate getDate(Instant dt) {
+        return dt.atZone(ZoneId.systemDefault()).toLocalDate();
     }
 }
